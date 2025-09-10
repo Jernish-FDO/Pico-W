@@ -157,11 +157,11 @@ For the app to work, your Firebase project needs to be configured correctly.
     ```
 
 ---
-```
+
 ## 📂 Project Structure
 
 A brief overview of the project's directory structure.
-
+```
 /
 ├── js/
 │ ├── app.js # Core application logic, DOM manipulation, Firebase listeners
