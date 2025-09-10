@@ -73,7 +73,7 @@ Follow these steps to get the project running on your local machine.
 2.**Install Dependencies:**
   This command will download all the necessary packages defined in `package.json`.
  ```bash
-  npm install
+ npm install
  ```
 
 3.**Configure Environment Variables:**
@@ -104,7 +104,7 @@ Follow these steps to get the project running on your local machine.
 5.**Start the Development Server:**
   You're all set! Run the following command to start the Vite dev server.
   ```bash
-   npm run dev
+  npm run dev
   ```
   Your application should now be running at `http://localhost:5173`.
 
@@ -143,7 +143,7 @@ For the app to work, your Firebase project needs to be configured correctly.
   Your hardware should be programmed to send data to Firebase in this specific JSON format. Make sure the root key (`esp32-living-room` in this example) matches your `DEVICE_ID`.
 
  ```json
-  {
+ {
    "devices": {
      "esp32-living-room": {
        "relays": {
@@ -187,7 +187,7 @@ Ready to go live? Deploying a Vite project is simple.
 1.**Build the Project:**
   Run the build command. This will compile and optimize all your files into a `dist` folder.
   ```bash
-   npm run build
+  npm run build
   ```
 
 2.**Deploy the `dist` Folder:**
