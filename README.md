@@ -126,7 +126,7 @@ For the app to work, your Firebase project needs to be configured correctly.
   -   Go to the **Rules** tab and paste the following rules. These rules ensure that only authenticated users can read from and write to the device data.
 
 ```json
-    {
+{
   "rules": {
     ".read": false,
     ".write": false,
