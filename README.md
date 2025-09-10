@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://www.gstatic.com/devrel-devsite/prod/v82226c601430932822a97519a28c3b7829202722b51347d4a1262d1c7f46c6ab/firebase/images/lockup.svg" width="200" alt="Firebase Logo">
+   <img src="https://cdn.cdnlogo.com/logos/f/48/firebase.svg" width="200" alt="Firebase Logo">
   <h1>🔥 Smart Home Automation Control Panel 🔥</h1>
   <p>A sleek, real-time, and secure web interface for controlling your DIY smart home devices.</p>
 
