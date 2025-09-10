@@ -2,9 +2,7 @@
 
 
 
-
-
-![Firebase](https://img.shields.io/badge/firebaselt with Raspberry Pi Pico W, Firebase Realtime Database, and a modern web interface. Control up to 16 electrical loads remotely with real-time monitoring, authentication, and advanced safety features.
+#### Firebase with Raspberry Pi Pico W, Firebase Realtime Database, and a modern web interface. Control up to 16 electrical loads remotely with real-time monitoring, authentication, and advanced safety features.
 
 
 
