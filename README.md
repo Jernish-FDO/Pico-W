@@ -66,8 +66,8 @@ Follow these steps to get the project running on your local machine.
 1.**Clone the Repository:**
   Open your terminal and clone this project to your local machine.
   ```bash
-   git clone https://your-repository-url.git
-   cd firebase-loads
+   git clone https://github.com/Jernish-FDO/Pico-W.git
+   cd Pico-W
   ```
 
 2.**Install Dependencies:**
