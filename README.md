@@ -1,4 +1,3 @@
-```markdown
 # 🏠 Pico-W Home Automation System
 
 [![Live Demo](https://img.shields.io/badge/Demo-pico--w.vercel.app-blue?style=for-the-badge&logo=vercel)](https://pico-w.vercel.app)
@@ -47,13 +46,13 @@ Before setting up this project, ensure you have:
 ## ⚙️ Installation & Setup
 
 ### 1. Hardware Setup
-```
+
 Pico W Pin Configuration:
 ├── GPIO 0-15  → Relay Control Pins
 ├── GPIO 16    → Status LED
 ├── 3.3V       → Power Rail
 └── GND        → Ground Rail
-```
+
 
 ### 2. Arduino IDE Configuration
 1. Install Arduino IDE
