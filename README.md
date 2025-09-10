@@ -127,16 +127,43 @@ For the app to work, your Firebase project needs to be configured correctly.
 
 ```json
     {
-      "rules": {
-        "devices": {
-          "$uid": {
-            // Only authenticated users can read/write to their own device data path
-            ".read": "auth != null",
-            ".write": "auth != null"
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "home_automation": {
+      "devices": {
+        "$device_id": {
+          ".read": "auth != null",
+          ".write": "auth != null",
+          "relays": {
+            "$relay_id": {
+              ".validate": "newData.hasChildren(['status']) || newData.hasChildren(['status', 'name'])",
+              "status": {
+                ".validate": "newData.isBoolean()"
+              },
+              "name": {
+                ".validate": "newData.isString() && newData.val().length <= 100"
+              }
+            }
+          },
+          "online": {
+            ".validate": "newData.isBoolean()"
+          },
+          "last_update": {
+            ".validate": "newData.isString() || newData.isNumber()"
           }
+        }
+      },
+      "users": {
+        "$user_id": {
+          ".read": "auth != null && auth.uid == $user_id",
+          ".write": "auth != null && auth.uid == $user_id"
         }
       }
     }
+  }
+}
+
 ```
 
 3.**Database Structure:**
