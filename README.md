@@ -3,10 +3,10 @@
   <h1>🔥 Smart Home Automation Control Panel 🔥</h1>
   <p>A sleek, real-time, and secure web interface for controlling your DIY smart home devices.</p>
 
-  <p>
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg"/>
-    <img alt="Vite" src="https://img.shields.io/badge/Built%20with-Vite-purple.svg"/>
-    <img alt="Tailwind CSS" src="https://img.shields.io/badge/Styled%20with-TailwindCSS-38B2AC.svg"/>
+    <p>
+    <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge"/>
+    <img alt="Vite" src="https://img.shields.io/badge/Built%20with-Vite-purple.svg?style=for-the-badge"/>
+    <img alt="Tailwind CSS" src="https://img.shields.io/badge/Styled%20with-TailwindCSS-38B2AC.svg?style=for-the-badge"/>
   </p>
 </div>
 
