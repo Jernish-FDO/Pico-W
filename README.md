@@ -63,50 +63,50 @@ Follow these steps to get the project running on your local machine.
 
 ### Installation Guide
 
-1.  **Clone the Repository:**
-    Open your terminal and clone this project to your local machine.
-    ```bash
-    git clone https://your-repository-url.git
-    cd firebase-loads
-    ```
+1.**Clone the Repository:**
+  Open your terminal and clone this project to your local machine.
+  ```bash
+   git clone https://your-repository-url.git
+   cd firebase-loads
+  ```
 
-2.  **Install Dependencies:**
-    This command will download all the necessary packages defined in `package.json`.
-    ```bash
-    npm install
-    ```
+2.**Install Dependencies:**
+  This command will download all the necessary packages defined in `package.json`.
+ ```bash
+  npm install
+ ```
 
-3.  **Configure Environment Variables:**
-    Create a `.env` file in the project root. This file will hold your secret Firebase credentials. **This file should NOT be committed to Git.**
+3.**Configure Environment Variables:**
+  Create a `.env` file in the project root. This file will hold your secret Firebase credentials. **This file should NOT be committed to Git.**
 
-    > **⚠️ Important:** Vite requires that environment variables exposed to the client-side code are prefixed with `VITE_`.
+ > **⚠️ Important:** Vite requires that environment variables exposed to the client-side code are prefixed with `VITE_`.
 
-    Copy the following into your new `.env` file and replace the placeholder values with your actual Firebase project credentials.
+ Copy the following into your new `.env` file and replace the placeholder values with your actual Firebase project credentials.
 
-    ```ini
-    # .env - Your secret Firebase configuration
-    VITE_FIREBASE_API_KEY="AIzaSyXXXXXXXXXXXXXXXXXXX"
-    VITE_FIREBASE_AUTH_DOMAIN="your-project-id.firebaseapp.com"
-    VITE_FIREBASE_DATABASE_URL="https://your-project-id-default-rtdb.firebaseio.com"
-    VITE_FIREBASE_PROJECT_ID="your-project-id"
-    VITE_FIREBASE_STORAGE_BUCKET="your-project-id.appspot.com"
-    VITE_FIREBASE_MESSAGING_SENDER_ID="1234567890"
-    VITE_FIREBASE_APP_ID="1:1234567890:web:XXXXXXXXXXXXXXXX"
-    ```
+```ini
+ # .env - Your secret Firebase configuration
+ VITE_FIREBASE_API_KEY="AIzaSyXXXXXXXXXXXXXXXXXXX"
+ VITE_FIREBASE_AUTH_DOMAIN="your-project-id.firebaseapp.com"
+ VITE_FIREBASE_DATABASE_URL="https://your-project-id-default-rtdb.firebaseio.com"
+ VITE_FIREBASE_PROJECT_ID="your-project-id"
+ VITE_FIREBASE_STORAGE_BUCKET="your-project-id.appspot.com"
+ VITE_FIREBASE_MESSAGING_SENDER_ID="1234567890"
+ VITE_FIREBASE_APP_ID="1:1234567890:web:XXXXXXXXXXXXXXXX"
+```
 
-4.  **Set Your Unique Device ID:**
-    The application needs to know which device to listen to in the database. Open `js/app.js` and set the `DEVICE_ID` constant.
-    ```javascript
-    // in file: js/app.js
-    const DEVICE_ID = 'esp32-living-room'; // 👈 CHANGE THIS to match your hardware's ID
-    ```
+4.**Set Your Unique Device ID:**
+  The application needs to know which device to listen to in the database. Open `js/app.js` and set the `DEVICE_ID` constant.
+  ```javascript
+   // in file: js/app.js
+   const DEVICE_ID = 'esp32-living-room'; // 👈 CHANGE THIS to match your hardware's ID
+  ```
 
-5.  **Start the Development Server:**
-    You're all set! Run the following command to start the Vite dev server.
-    ```bash
-    npm run dev
-    ```
-    Your application should now be running at `http://localhost:5173`.
+5.**Start the Development Server:**
+  You're all set! Run the following command to start the Vite dev server.
+  ```bash
+   npm run dev
+  ```
+  Your application should now be running at `http://localhost:5173`.
 
 ---
 
@@ -114,16 +114,16 @@ Follow these steps to get the project running on your local machine.
 
 For the app to work, your Firebase project needs to be configured correctly.
 
-1.  **Authentication:**
-    -   In the Firebase Console, go to **Authentication**.
-    -   Click the "Sign-in method" tab.
-    -   Enable the **Email/Password** provider.
-    -   Go to the "Users" tab and add at least one user so you can log in.
+1.**Authentication:**
+   -   In the Firebase Console, go to **Authentication**.
+   -   Click the "Sign-in method" tab.
+   -   Enable the **Email/Password** provider.
+   -   Go to the "Users" tab and add at least one user so you can log in.
 
-2.  **Realtime Database:**
-    -   In the Firebase Console, go to **Realtime Database**.
-    -   Create a new database. Start in **Locked mode** for security.
-    -   Go to the **Rules** tab and paste the following rules. These rules ensure that only authenticated users can read from and write to the device data.
+2.**Realtime Database:**
+  -   In the Firebase Console, go to **Realtime Database**
+  -   Create a new database. Start in **Locked mode** for security.
+  -   Go to the **Rules** tab and paste the following rules. These rules ensure that only authenticated users can read from and write to the device data.
 
 ```json
     {
@@ -139,22 +139,22 @@ For the app to work, your Firebase project needs to be configured correctly.
     }
 ```
 
-3.  **Database Structure:**
-    Your hardware should be programmed to send data to Firebase in this specific JSON format. Make sure the root key (`esp32-living-room` in this example) matches your `DEVICE_ID`.
+3.**Database Structure:**
+  Your hardware should be programmed to send data to Firebase in this specific JSON format. Make sure the root key (`esp32-living-room` in this example) matches your `DEVICE_ID`.
 
-    ```json
-    {
-      "devices": {
-        "esp32-living-room": {
-          "relays": {
-            "RELAY_1": 0, "RELAY_2": 1, /* ... up to RELAY_16 */
+ ```json
+  {
+   "devices": {
+     "esp32-living-room": {
+       "relays": {
+         "RELAY_1": 0, "RELAY_2": 1, /* ... up to RELAY_16 */
           },
           "last_seen": 1678886400,
           "wifi_status": "Connected"
         }
-      }
-    }
-    ```
+     }
+  }
+ ```
 
 ---
 
@@ -184,18 +184,18 @@ A brief overview of the project's directory structure.
 
 Ready to go live? Deploying a Vite project is simple.
 
-1.  **Build the Project:**
-    Run the build command. This will compile and optimize all your files into a `dist` folder.
-    ```bash
-    npm run build
-    ```
+1.**Build the Project:**
+  Run the build command. This will compile and optimize all your files into a `dist` folder.
+  ```bash
+   npm run build
+  ```
 
-2.  **Deploy the `dist` Folder:**
-    Upload the contents of the `dist` folder to any static hosting provider. Excellent free options include:
-    -   [Netlify](https://www.netlify.com/)
-    -   [Vercel](https://vercel.com/)
-    -   [Firebase Hosting](https://firebase.google.com/docs/hosting)
-    -   [GitHub Pages](https://pages.github.com/)
+2.**Deploy the `dist` Folder:**
+  Upload the contents of the `dist` folder to any static hosting provider. Excellent free options include:
+   -   [Netlify](https://www.netlify.com/)
+   -   [Vercel](https://vercel.com/)
+   -   [Firebase Hosting](https://firebase.google.com/docs/hosting)
+   -   [GitHub Pages](https://pages.github.com/)
 
 ---
 
