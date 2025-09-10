@@ -16,7 +16,7 @@
 
 <!-- 💡 TIP: Create a GIF of your app working (logging in, toggling switches) and replace this image! -->
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/10933929/153888362-79e4a329-847e-4054-9418-77114b01d2d1.png" alt="App Screenshot" width="800">
+  <img src="https://github.com/Jernish-FDO/Pico-W/blob/main/Screenshot_20250910-221145.png" alt="App Screenshot" width="800">
 </div>
 
 ---
