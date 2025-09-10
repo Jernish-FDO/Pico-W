@@ -157,7 +157,7 @@ For the app to work, your Firebase project needs to be configured correctly.
     ```
 
 ---
-
+```
 ## 📂 Project Structure
 
 A brief overview of the project's directory structure.
@@ -176,6 +176,7 @@ A brief overview of the project's directory structure.
 ├── postcss.config.js # Configuration for PostCSS
 ├── style.css # Main stylesheet with Tailwind directives
 └── tailwind.config.js # Configuration for Tailwind CSS
+```
 
 ---
 
