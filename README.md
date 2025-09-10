@@ -170,17 +170,75 @@ For the app to work, your Firebase project needs to be configured correctly.
   Your hardware should be programmed to send data to Firebase in this specific JSON format. Make sure the root key (`esp32-living-room` in this example) matches your `DEVICE_ID`.
 
  ```json
- {
-   "devices": {
-     "esp32-living-room": {
-       "relays": {
-         "RELAY_1": 0, "RELAY_2": 1, /* ... up to RELAY_16 */
+{
+  "home_automation": {
+    "devices": {
+      "pico_w_001": {
+        "last_update": 1757527921,
+        "online": true,
+        "relays": {
+          "relay_1": {
+            "name": "Living Room Light",
+            "status": false
           },
-          "last_seen": 1678886400,
-          "wifi_status": "Connected"
+          "relay_10": {
+            "status": false
+          },
+          "relay_11": {
+            "status": false
+          },
+          "relay_12": {
+            "status": false
+          },
+          "relay_13": {
+            "status": false
+          },
+          "relay_14": {
+            "status": false
+          },
+          "relay_15": {
+            "status": false
+          },
+          "relay_16": {
+            "status": false
+          },
+          "relay_2": {
+            "status": false
+          },
+          "relay_3": {
+            "status": false
+          },
+          "relay_4": {
+            "status": false
+          },
+          "relay_5": {
+            "status": false
+          },
+          "relay_6": {
+            "status": false
+          },
+          "relay_7": {
+            "status": false
+          },
+          "relay_8": {
+            "status": false
+          },
+          "relay_9": {
+            "status": false
+          }
         }
-     }
+      }
+    },
+    "users": {
+      "YOUR_USER_UID": {
+        "permissions": {
+          "pico_w_001": true
+        },
+        "role": "admin"
+      }
+    }
   }
+}
  ```
 
 ---
