@@ -125,7 +125,7 @@ For the app to work, your Firebase project needs to be configured correctly.
     -   Create a new database. Start in **Locked mode** for security.
     -   Go to the **Rules** tab and paste the following rules. These rules ensure that only authenticated users can read from and write to the device data.
 
-    ```json
+```json
     {
       "rules": {
         "devices": {
@@ -137,7 +137,7 @@ For the app to work, your Firebase project needs to be configured correctly.
         }
       }
     }
-    ```
+```
 
 3.  **Database Structure:**
     Your hardware should be programmed to send data to Firebase in this specific JSON format. Make sure the root key (`esp32-living-room` in this example) matches your `DEVICE_ID`.
